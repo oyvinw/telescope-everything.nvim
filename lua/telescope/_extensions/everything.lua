@@ -38,6 +38,9 @@ local run = function(opts)
     if opts.sort then
         table.insert(command_params, "-s")
     end
+    if opts.path then
+        table.insert(command_params, "-path")
+    end
     if opts.offset then
         table.insert(command_params, "-offset")
         table.insert(command_params, tostring(opts.offset))
