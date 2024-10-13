@@ -41,6 +41,12 @@ local run = function(opts)
     if opts.path then
         table.insert(command_params, "-path")
     end
+    if opts.parent then
+        table.insert(command_params, "-parent")
+    end
+    if opts.parent_path then
+        table.insert(command_params, "-parent-path")
+    end
     if opts.offset then
         table.insert(command_params, "-offset")
         table.insert(command_params, tostring(opts.offset))
